@@ -23,6 +23,7 @@
                 @*@Html.ActionLink(@b.Name, "Add")*@
                 <td><p>@(number++) </p></td>
                 <td><p><a href="/Home/ViewAuthor/@a.AuthorId">@a.AuthorName</a></p></td>
+                <td><p>@a.Books.Count() </p></td>
             </tr>
         }
     </table>

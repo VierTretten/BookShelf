@@ -18,7 +18,8 @@ namespace BookShelf.Controllers
         }
         public ActionResult IndexAuthor()
         {
-            return View(db.Authors);
+            var authors = db.Authors.Include(a => a.Books).ToList();
+            return View(authors);
         }
         [HttpGet]
         public ActionResult AddBook()
